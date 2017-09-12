@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chess board is an awesome chess ♔ game ever. You can play it either online or after downloaded"/>
+    <meta name="keywords" content="chamod shehanka,chess board,chess,chamod,shehanka,chess online,play online chess,chamodshehanka.com"/>
+    <title>Chess Board ♔| Play Online Chess</title>
+    <link rel="shortcut icon" href="http://chessboard.ml/images/chess.png"/>
+
+    <!--Open Graph tags for SEO-->
+    <meta property="og:title" content="Chess Board | Play Online Chess"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.chessboard.ml/"/>
+    <meta property="og:image" content="http://chessboard.ml/images/chessboard.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="960"/>
+    <meta property="og:image:height" content="355"/>
+    <link rel="stylesheet" href="http://chamodshehanka.com/assets/removewebhost.css">
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Chamod Shehanka",
+          "url": "http://chamodshehanka.com/",
+          "image": "http://chamodshehanka.com/images/img_6317.jpg",
+          "description": "Chamod Shehanka is a software engineer (undergraduate), self educated web developer, SEO beginner, swimmer and karate black belt holder.",
+          "sameAs": [
+            "https://www.facebook.com/chamodshehanka",
+            "https://www.instagram.com/chamodshehanka/",
+            "https://twitter.com/chamodhshehanka",
+            "https://www.linkedin.com/in/chamod-shehanka-a61583136?trk=hp-identity-name",
+            "https://www.snapchat.com/add/chamodshehanka",
+            "https://soundcloud.com/chamod-shehanka",
+            "https://github.com/Shehanka",
+            "https://plus.google.com/u/0/110799112675656951726"
+          ]
+        }
+    </script>
+    <!--End SEO data-->
+
+    <!--Frame works-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--End Materialize-->
+    <!--End frame works-->
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <!--End fonts-->
+
+    <!--Buttons-->
+    <link rel="stylesheet" href="css/svg-button.css">
+    <!--End buttons-->
+
+    <link rel="stylesheet" href="css/play.css">
+</head>
+
+<body oncontextmenu="return false;">
+<!--Pre loader-->
+<div class="spinner-wrapper">
+    <h1 id="spinner-logo">CHESS BOARD</h1>
+    <p align="center">
+        <img src="images/chess.png"  width="300px" height="300px"><br>
+    </p>
+    <div class="spinner">
+        <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+    </div>
+</div>
+<!--End Pre loader -->
+
+<!--Header-->
+<header id="header">
+    <div class="row">
+        <div class="col-md-3">
+            <h1 id="logo-text">Chess Board</h1>
+        </div>
+
+        <div class="col-md-6">
+            <div class="btn-header" onclick="homepage()">Home</div>
+            <div class="btn-header" onclick="playpage()">Play</div>
+            <div class="btn-header" onclick="blogpage()">Blog</div>
+            <div class="btn-header" onclick="Materialize.toast('Shop is available soon!', 2000,'rounded')">Shop</div>
+            <div class="btn-header" onclick="login()">Follow</div>
+        </div>
+
+        <div class="col-md-3">
+            <!--Tap-->
+            <a id="menu" class="waves-effect waves-light" style="float: right">
+                <!--btn btn-floating-->
+                <!--<i class="material-icons"></i>-->
+            </a>
+            <!-- Tap Target Structure -->
+            <div class="tap-target" data-activates="menu" style="background-color: #3498db;">
+                <div class="tap-target-content">
+                    <h5 style="padding-left: 200px;-webkit-text-fill-color: white">Follow via</h5>
+                    <br>
+                    <div id="social-icons-container">
+                        <a href="https://www.facebook.com/chamodshehanka" target="_blank">
+                            <img src="https://png.icons8.com/facebook/color/24" title="Facebook" width="40" height="40">
+                        </a>
+                        <a href="https://www.instagram.com/chamodshehanka/" target="_blank">
+                            <img src="https://png.icons8.com/instagram/color/24" title="Instagram" width="40" height="40">
+                        </a>
+                        <a href="https://twitter.com/chamodhshehanka" target="_blank">
+                            <img src="https://png.icons8.com/twitter/color/24" title="Twitter" width="40" height="40">
+                        </a>
+                        <a href="https://www.linkedin.com/in/chamod-shehanka-a61583136?trk=hp-identity-name" target="_blank">
+                            <img src="https://png.icons8.com/linkedin/color/24" title="LinkedIn" width="40" height="40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--End Tap-->
+        </div>
+    </div>
+
+</header>
+<!--End Header-->
+
+<!--Side Nav-->
+<ul id="slide-out" class="side-nav">
+    <li>
+        <div style="background-color: #3498db;width: 150%;height: 150px;margin: 0 auto;padding-left: 55%">
+            <img src="images/chess.png" width="200px" height="200px">
+        </div>
+    </li><br><br>
+    <li class="side-menu-list">
+        <button class="btn btn-side-menu tooltipped" onclick="setChessPieces()" data-position="right" data-delay="50" data-tooltip="Or press b">
+            New Game
+            <img class="icon icons8-Play-Filled" width="25px" height="25px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABoUlEQVRoQ+3ZMUvFMBSG4ff7swpODooOIog4OLiIi6tu4g/QUUc3N++ig5MODgqCIEYOGHCStD1pzq23c0m/pyE9J6mYyKWJOFhAos3k/5uRlNKGpP1oM5HzFM9ISikBd8CqpMtooK6QnP8CWJH0EAXUF2L5P4ADYE/Se2vQEEjO/gisSTprifGA5PxXwLKkWQuQJ8TyfwJHwK6klzFB3pCc3RBbwLGkrzFAtSA5+y2wJOmmNqY2xPJb/TkF1iU91wKNAcnZX4Ed4FCSrSXXa0xIDm7dgX3drj0lLSA5/zlg/du9B6glxLU7aA1x6w6iQAZ3B9Egv7uDbUlvpesnIiRnf7KPgdWgku4gMqRTdzAPkKLuYAEpXYQO9xU1npFnpNNWICKk1+YsGqT3djkKZPABRmuI25FSS4jrIV8LSJVj1zEhc7/VncThQ1FVdqj+5b/efn4rlD7TWvBN4KSkBS8d9K/7vNdIrsqdNkXRIL2rchTI4KrcGuJWlVtCXA/XWkCqHHeODZnG72mPt1ZzjOI6UjOEx9gLiMdb9BxjMjPyDbMM/jMWFchpAAAAAElFTkSuQmCC">
+        </button>
+    </li>
+    <li class="side-menu-list">
+        <button class="btn btn-side-menu" onclick="resetChessBoard()" style="background-color: #e74c3c">
+            Re play
+            <img class="icon icons8-Replay" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADjUlEQVRoQ+2ajVEUQRBGuyNQI1AiECJQIlAjUDKACMQIxAiUCJQIhAiECIQIhAg+61k91uze7u3M3t5xi3YVJdbdzs7rn5lvenB7IOYPhMOWgkj6Aai772078BCIAqQocpJemNlLM9s1s8fxe+6DczO7NbNLMzt394upHLQyiCQm/tbM3o2YFFDfzOzU3YEcbaNBAuB9y+tXeDp+btuTi2dSpHDA82zmROmDuwNWbdUgkp6Z2ecM4M7MTszsi7tf18wgxnptZodm9jSexREHtWNVgUjipUDgVQCO3R2IlU0SqclYj6KOgCmOTjGIJNLoOGZ8Rk24Ozk+mUnCQcBQc9iJux+VvKAIhLTJivloqij0TTCiQ+QxUvZgCKYUJI1DuIFau8XCQGqRap/cnTrqtVqQvoEu17FpBsz3eOmbZTUzFciVu7MJTm5ZmlGPe32rWdGOPfnsKgeURDqzAKAG9rsenwsIqxl7FPXSmWKzACECWYpdu/tOOyqzAQkYooIC2G/Ln7mBsAR/DJHZEKlzA0Hn/SQ67t6Y+6xAIr1QyajmRnrNEQS9h+5D8iftt/yoW7ncb+TrocC/mtmFu3Om+WNzjAgKgl5CQxbNDiTqZKGX0ACZS9dE0iBIVddkI0XR8ZJ/CiRJAOQy6/XWmaRU7I2jQ7tG6GDQZFvQMttCVLT8SurcbLYFIlas4Q2xj3bLQFLWNM4l7dTiAPMrJv5k6nbPqg6Jhl6ZaJRE5+KVma297VMLJinJ+DN3p1n41xZ29iy9Ok9itS+f8vuSiAZSfuG42ylRJKVleGN9rCHg7Kh74+7ANKwPhNMXnT5aMDv3XSvRSiUa1HCnc3tFo6S0OhS1LIc8usrnknAqzm1I96U1kj6MHRQYWjD3lmJZStH93x3VoGt1+djtNypbwpm0THtTKjl+8DySdfmol43BtCC4mlt6tTcIErIgtSyBYX9Za0c+MoG2D5EYhKg66maR4TkuYzj8r+OiB4Dk/SKIKpCITH49xl7D1dvpKitStrjQpEYQskdQ2Ic1kS9KrXyikbtEBLmPAcT/8V5VhGJ/AADpkTY57t6BqFpYqkEyDxIdPJhuY/koXU3z7117MuEElnPaOOknDXkTER5Vf6NBMiDEG1AIzTHGxSqbbvENbtdLVgbJgNIfAnAUxdukSh4tvorXSUUilv6Moyod+zw1GciYUEz5zH+QKb05xVi/AS8JpUJ2rLilAAAAAElFTkSuQmCC">
+        </button>
+    </li>
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+<!--End Side Nav-->
+<div style="background-color: #3498db;width: 60px;height: 100%;position: fixed;z-index: -1"></div>
+<div style="padding-top: 60px"><!--btn-floating btn-large -->
+    <button class="btn-floating btn-large waves-effect waves-light blue" onclick="$('.button-collapse').sideNav('show');" style="background-color: #3498db;position: fixed;">
+        <img class="icon icons8-Menu" width="30" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAApUlEQVRoQ+2XwQnAMAwD4/2HdqEjSAiMuP4l4jsH0nkl35TM8RjkmkmMYCREgNUKgZVrZ3dXTh8K9gxyCKp1FC67hS8QxkgAqlWJEQtfIIyRAFSrEiMWvkAYIwGoVmXP67fmf8TyeSjMZT8k4z8KRjASIsBqhcDKtRiR0YWCGAmBlWt7jNS8fmsGkZfyWLDnjhwDKx8HIzK6UBAjIbByLUZkdKHgB5RLGBsxuwzhAAAAAElFTkSuQmCC">
+    </button>
+</div>
+<!--Chess Board-->
+<div id="mainChessBoard">
+    <div id="chess-board">
+        <div id="chess-frame">
+            <!--8th row-->
+            <div class="white-square" id="a8"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="b8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="c8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="d8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="e8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="f8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="g8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="h8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--7th row-->
+            <div class="black-square" id="a7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="b7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="c7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="d7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="e7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="f7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="g7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="h7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--6th row-->
+            <div class="white-square" id="a6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="b6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="c6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="d6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="e6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="f6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="g6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="h6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--5th row-->
+            <div class="black-square" id="a5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="b5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="c5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="d5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="e5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="f5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="g5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="h5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--4th row-->
+            <div class="white-square" id="a4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="b4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="c4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="d4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="e4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="f4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="g4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="h4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--3rd row-->
+            <div class="black-square" id="a3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="b3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="c3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="d3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="e3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="f3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="g3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="h3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--2nd row-->
+            <div class="white-square" id="a2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="b2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="c2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="d2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="e2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="f2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="g2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="h2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!--1st row-->
+            <div class="black-square" id="a1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="b1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="c1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="d1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="e1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="f1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black-square" id="g1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white-square" id="h1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+</div>
+<!--Chess Board-->
+<!--<div style="width: 100%;height: 50px"></div>-->
+
+<!--Guides-->
+
+<!--End guides-->
+
+<!--Footer-->
+<footer class="page-footer" style="background-color: #3498db;margin-bottom: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col l4 s12">
+                <h5>Join the discussion</h5>
+                <p class="grey-text text-lighten-4">We have a facebook messenger chat group set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+                <button class="btn waves-effect waves-white btn-flat" style="-webkit-text-fill-color: white">Join Chat</button>
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large blue" href="#">
+                        <img class="icon icons8-Slide-Up" width="30" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD+0lEQVRoQ92a61EUQRCAuyNQI1AjUCIQIlAjECMQIhAjUCJQIhAiECIQIhAiECJo67vqWef2NY+dgyumav/c7e7M1+/pWZVHMvSRcEgzEDN7KiJvROS1iOyKyAu/YlldiwjXuYhcisiFqt62EOZiEDP7ICLv/KpZ06mInKrqSc3D4ZlqEDP7LCL7PalfuLSR+K2qIvVumBnaQnNojAsNhoGmvqnqcQ1QMYiZsYDvEcAVC3CpFpmJmyPaPBCRVw4A0EdVRRjZowjEzL76pEwAwEHphFMrcwEhkACEdg5zSbJAXHK/3JHvRORIVZm0+TAztHMkIk88IOzlBIQkiNs1poR9o4X9vu23pvE5f7h28DNMbc3f+nPOgvQ0AcRujnRagPnc+AmmBsSsZlIgvyNN3BtEEEQfRlV3poQ0CWJm+MAnN6d7h5iAOVZVfGgwRkE8guDcODYQs/bZwpTm3uE+g5kRADCxQWieAvnjeeJwU9GpFN6jGeH/WlVfJp3dzAh9ZO0rVSVSbc0wMywD5x8IeKARMwvaGFXhQ1JFJj/QyhqImVE7kTO2ThuR8wetkFvINavRB6ESfesJqLupVgtRHuIVWRk6NVck7DNVpU5bB/FJ//rvz5Ymvl4y5bXJpJaC4P+pdXYaMTPofvpmhwq3eoxUBLwrK0PnTGpmhF+2AO9VFSv6b1pRtPqiqkSuqjFW1viLssuN1MRja401Eiiro9VcbVZaO83BjFlPDBLC7k5NJs8pMFvBeKanDrwM9VcMYitbU02W9n1p5UCEZxrCrK13MUgJREsYM2sHUgPRCqYZyBKIFjBzIHQvnotIlrObGWU++WbRzrHnM+equpcRfilmcfaulKoOv56UVj2qRlVA6IUlk3FUPNKpXN0fg4TyfVFCTEmzxf+phNisRGmx2ERCnC1RMJNmReOmYJJFo1eWTcv4TcAky3gHCRurLvVvYjFL3mlmoUU1vbFymBCGq4vHJQtN+AYRirB/o6qcv3RjbM9O34huxdZpJdJGuvnQ08o2toMG2ljLI7GaooTDeQcmtg0NOkyKyJrfoHOthJZpk712rd/0arqylmlU1IXWy4PA9AvTuYZhqhuPKpvttUu0UlpdJ3eDNYcuJQseu7fmcCkJ4v4Sa4YAwNFb1elrCtLMOMqggGXO7C1CFkjkMyEA8BN+Q3guOn2dAvFISf4KjfNJxx57RxGIa4fsSjuVTVgAApAWZs3xNC1aknAAuPFzyiIBFYNE2mFyrgDEX0werruJDwY4rAkfDMSbKAA4kq46La4GiYAoNNnLINmaceYfGyxqmi8GiYDCpxnxRzWxtrgV58X8wkc17NGLzHFKUs1AalTR8plHA/IPmftTUR0uABMAAAAASUVORK5CYII=">
+                    </a>
+                </div>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Follow us on</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/chamodshehanka" target="_blank">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/chamodshehanka/" target="_blank">Instagram</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://twitter.com/chamodhshehanka" target="_blank">Twitter</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/chamod-shehanka-a61583136?trk=hp-identity-name" target="_blank">LinkedIn</a></li>
+                    <li><a class="grey-text text-lighten-3" href="ttps://github.com/Shehanka" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Chamod Shehanka. All right received
+            <a class="grey-text text-lighten-4 right tooltipped" href="http://chamodshehanka.com" target="_blank" data-position="top" data-delay="50" data-tooltip="Website author">
+                <img src="http://chamodshehanka.com/images/logo%20design.png?crc=3880735088" width="25px" height="25px">
+                Chamod Shehanka
+            </a>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+
+<!--Java Scripts-->
+<script>
+   /* $(document).ready(function() {
+//Pre loader
+        $(window).load(function() {
+            var preloaderFadeOutTime = 500;
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+        });
+    });*/
+
+    $(".button-collapse").sideNav();
+</script>
+<script src="js/index.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script src="js/chessController.js"></script>
+<script>
+    if (annyang) {
+        var commands = {
+            'hi': function() {
+                rotateBoard();
+            },
+
+            'start':function () {
+                setChessPieces();
+            },
+
+            'menu':function () {
+                $('.button-collapse').sideNav('show');
+            },
+
+            'turn':function () {
+                rotateBoard();
+            },
+
+            'check':function () {
+                checkKing();
+            },
+
+            'check mate':function () {
+                checkMate();
+            },
+
+            'knight':function () {
+                selectKnight();
+            },
+
+            'A3':function () {
+                movetoAthree();
+            }
+        };
+        annyang.debug();
+        annyang.addCommands(commands);
+        annyang.start();
+    }
+</script>
+<script src="js/chessMore.js"></script>
+<!--End Java scripts-->
+</body>
+</html>

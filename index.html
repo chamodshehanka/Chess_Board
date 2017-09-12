@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chess board is an awesome chess game ever. You can play it either online or after downloaded"/>
+    <meta name="keywords" content="chamod shehanka,chess board,chess,chamod,shehanka,chess online,play online chess,chamodshehanka.com"/>
+    <title>Chess Board | Play Online Chess</title>
+    <link rel="shortcut icon" href="http://chessboard.ml/images/chess.png"/>
+    <meta name="msvalidate.01" content="9930FFDB0093C9A14CCE40B333D72070" />
+    <!--Open Graph tags for SEO-->
+    <meta property="og:title" content="Chess Board | Play Online Chess"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.chessboard.ml/"/>
+    <meta property="og:image" content="http://chessboard.ml/images/chessboard.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="960"/>
+    <meta property="og:image:height" content="355"/>
+    <link rel="stylesheet" href="http://chamodshehanka.com/assets/removewebhost.css">
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Chamod Shehanka",
+          "url": "http://chamodshehanka.com/",
+          "image": "http://chamodshehanka.com/images/img_6317.jpg",
+          "description": "Chamod Shehanka is a software engineer (undergraduate), self educated web developer, SEO beginner, swimmer and karate black belt holder.",
+          "sameAs": [
+            "https://www.facebook.com/chamodshehanka",
+            "https://www.instagram.com/chamodshehanka/",
+            "https://twitter.com/chamodhshehanka",
+            "https://www.linkedin.com/in/chamod-shehanka-a61583136?trk=hp-identity-name",
+            "https://www.snapchat.com/add/chamodshehanka",
+            "https://soundcloud.com/chamod-shehanka",
+            "https://github.com/Shehanka",
+            "https://plus.google.com/u/0/110799112675656951726"
+          ]
+        }
+    </script>
+    <!--End SEO data-->
+
+    <!--Frame works-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--End Materialize-->
+    <!--End frame works-->
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <!--End fonts-->
+
+    <!--Buttons-->
+    <link rel="stylesheet" href="css/svg-button.css">
+    <!--End buttons-->
+
+
+</head>
+
+<body oncontextmenu="return false;">
+<!--Pre loader-->
+<div class="spinner-wrapper">
+    <h1 id="spinner-logo">CHESS BOARD</h1>
+	<p align="center">
+		<img src="images/chess.png"  width="300px" height="300px"><br>
+	</p>
+    <div class="spinner">
+        <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+    </div>
+</div>
+<!--End Pre loader -->
+
+<!--Header-->
+<header id="header">
+    <div class="row">
+        <div class="col-md-3">
+            <h1 id="logo-text">Chess Board</h1>
+        </div>
+
+        <div class="col-md-6">
+            <div class="btn-header" onclick="homepage()">Home</div>
+            <div class="btn-header" onclick="playpage()">Play</div>
+            <div class="btn-header">Blog</div>
+            <div class="btn-header" onclick="Materialize.toast('Shop is available soon!', 2000)">Shop</div>
+            <div class="btn-header" onclick="login()">Follow</div>
+        </div>
+
+        <div class="col-md-3">
+            <!--Tap-->
+            <a id="menu" class="waves-effect waves-light" style="float: right">
+                <!--btn btn-floating-->
+                <!--<i class="material-icons"></i>-->
+            </a>
+            <!-- Tap Target Structure -->
+            <div class="tap-target" data-activates="menu" style="background-color: #3498db;">
+                <div class="tap-target-content">
+                    <h5 style="padding-left: 200px;-webkit-text-fill-color: white">Follow via</h5>
+                    <br>
+                    <div id="social-icons-container">
+                        <a href="https://www.facebook.com/chamodshehanka" target="_blank">
+                            <img src="https://png.icons8.com/facebook/color/24" title="Facebook" width="40" height="40">
+                        </a>
+                        <a href="https://www.instagram.com/chamodshehanka/" target="_blank">
+                            <img src="https://png.icons8.com/instagram/color/24" title="Instagram" width="40" height="40">
+                        </a>
+                        <a href="https://twitter.com/chamodhshehanka" target="_blank">
+                            <img src="https://png.icons8.com/twitter/color/24" title="Twitter" width="40" height="40">
+                        </a>
+                        <a href="https://www.linkedin.com/in/chamod-shehanka-a61583136?trk=hp-identity-name" target="_blank">
+                            <img src="https://png.icons8.com/linkedin/color/24" title="LinkedIn" width="40" height="40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--End Tap-->
+        </div>
+    </div>
+
+</header>
+<!--End Header-->
+
+<!--Bouncing arrow-->
+<i class="arrow bounce"></i>
+<!--End bouncing arrow-->
+
+<!--First Impression-->
+<div id="impression" style="background-image: url('images/impression1-croped.png');">
+    <h1 id="lbl-chessBoard">CHESS BOARD</h1>
+    <h4 id="lbl-description">Awesome chess game ever. You can play it either online or after downloaded</h4>
+    <!--Play Now Button-->
+    <a id="btn-playNow" class="btn btn--svg js-animated-button" href="play.html">
+        <span class="btn--svg__label">Play Now !</span>
+        <svg class="btn--svg__circle" width="190" x="0px" y="0px" viewBox="0 0 60 60" enable-background="new 0 0 60 60">
+            <circle class="js-discover-circle" fill="#FFFFFF" cx="30" cy="30" r="28.7"></circle>
+        </svg>
+        <svg class="btn--svg__border" x="0px" y="0px" preserveaspectratio="none" viewBox="2 29.3 56.9 13.4" enable-background="new 2 29.3 56.9 13.4" width="190">
+            <g class="btn--svg__border--left js-discover-left-border" id="Calque_2">
+                <path fill="none" stroke="#FFF" stroke-width="0.5" stroke-miterlimit="1" d="M30.4,41.9H9c0,0-6.2-0.3-6.2-5.9S9,30.1,9,30.1h21.4"></path>
+            </g>
+            <g class="btn--svg__border--right js-discover-right-border" id="Calque_3">
+                <path fill="none" stroke="#FFF" stroke-width="0.5" stroke-miterlimit="1" d="M30.4,41.9h21.5c0,0,6.1-0.4,6.1-5.9s-6-5.9-6-5.9H30.4"></path>
+            </g>
+        </svg>
+    </a>
+    <!--End Play Now Button-->
+
+    <!--Bouncing Arrow-->
+    <link rel="stylesheet" href="css/bouncing-arrow.css">
+    <!--End Bouncing Arrow-->
+</div>
+<!--End first impression-->
+
+<!--Footer-->
+<footer class="page-footer" style="background-color: #3498db;margin-bottom: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col l4 s12">
+                <h5>Join the discussion</h5>
+                <p class="grey-text text-lighten-4">We have a facebook messenger chat group set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+                <button class="btn waves-effect waves-white btn-flat" style="-webkit-text-fill-color: white">Join Chat</button>
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large blue" href="#">
+                        <img class="icon icons8-Slide-Up" width="30" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD+0lEQVRoQ92a61EUQRCAuyNQI1AjUCIQIlAjECMQIhAjUCJQIhAiECIQIhAiECJo67vqWef2NY+dgyumav/c7e7M1+/pWZVHMvSRcEgzEDN7KiJvROS1iOyKyAu/YlldiwjXuYhcisiFqt62EOZiEDP7ICLv/KpZ06mInKrqSc3D4ZlqEDP7LCL7PalfuLSR+K2qIvVumBnaQnNojAsNhoGmvqnqcQ1QMYiZsYDvEcAVC3CpFpmJmyPaPBCRVw4A0EdVRRjZowjEzL76pEwAwEHphFMrcwEhkACEdg5zSbJAXHK/3JHvRORIVZm0+TAztHMkIk88IOzlBIQkiNs1poR9o4X9vu23pvE5f7h28DNMbc3f+nPOgvQ0AcRujnRagPnc+AmmBsSsZlIgvyNN3BtEEEQfRlV3poQ0CWJm+MAnN6d7h5iAOVZVfGgwRkE8guDcODYQs/bZwpTm3uE+g5kRADCxQWieAvnjeeJwU9GpFN6jGeH/WlVfJp3dzAh9ZO0rVSVSbc0wMywD5x8IeKARMwvaGFXhQ1JFJj/QyhqImVE7kTO2ThuR8wetkFvINavRB6ESfesJqLupVgtRHuIVWRk6NVck7DNVpU5bB/FJ//rvz5Ymvl4y5bXJpJaC4P+pdXYaMTPofvpmhwq3eoxUBLwrK0PnTGpmhF+2AO9VFSv6b1pRtPqiqkSuqjFW1viLssuN1MRja401Eiiro9VcbVZaO83BjFlPDBLC7k5NJs8pMFvBeKanDrwM9VcMYitbU02W9n1p5UCEZxrCrK13MUgJREsYM2sHUgPRCqYZyBKIFjBzIHQvnotIlrObGWU++WbRzrHnM+equpcRfilmcfaulKoOv56UVj2qRlVA6IUlk3FUPNKpXN0fg4TyfVFCTEmzxf+phNisRGmx2ERCnC1RMJNmReOmYJJFo1eWTcv4TcAky3gHCRurLvVvYjFL3mlmoUU1vbFymBCGq4vHJQtN+AYRirB/o6qcv3RjbM9O34huxdZpJdJGuvnQ08o2toMG2ljLI7GaooTDeQcmtg0NOkyKyJrfoHOthJZpk712rd/0arqylmlU1IXWy4PA9AvTuYZhqhuPKpvttUu0UlpdJ3eDNYcuJQseu7fmcCkJ4v4Sa4YAwNFb1elrCtLMOMqggGXO7C1CFkjkMyEA8BN+Q3guOn2dAvFISf4KjfNJxx57RxGIa4fsSjuVTVgAApAWZs3xNC1aknAAuPFzyiIBFYNE2mFyrgDEX0werruJDwY4rAkfDMSbKAA4kq46La4GiYAoNNnLINmaceYfGyxqmi8GiYDCpxnxRzWxtrgV58X8wkc17NGLzHFKUs1AalTR8plHA/IPmftTUR0uABMAAAAASUVORK5CYII=">
+                    </a>
+                </div>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Follow us on</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/chamodshehanka" target="_blank">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/chamodshehanka/" target="_blank">Instagram</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://twitter.com/chamodhshehanka" target="_blank">Twitter</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/chamod-shehanka-a61583136?trk=hp-identity-name" target="_blank">LinkedIn</a></li>
+                    <li><a class="grey-text text-lighten-3" href="ttps://github.com/Shehanka" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Chamod Shehanka. All right received
+                <a class="grey-text text-lighten-4 right tooltipped" href="http://chamodshehanka.com" target="_blank" data-position="top" data-delay="50" data-tooltip="Website author">
+                    <img src="http://chamodshehanka.com/images/logo%20design.png?crc=3880735088" width="25px" height="25px">
+                    Chamod Shehanka
+                </a>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+
+<!--Java Scripts-->
+<script>
+    $(document).ready(function() {
+//Preloader
+        $(window).load(function() {
+            preloaderFadeOutTime = 500;
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+        });
+    });
+</script>
+<script src="js/index.js"></script>
+<!--End Java scripts-->
+</body>
+</html>
