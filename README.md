@@ -1,3 +1,4 @@
+![Logo](https://github.com/Shehanka/Chess_Board/blob/master/images/chessboard.jpg)
 # Chess_Board
 Chess board is an awesome chess game ever. In this site you can move chess pieces by your voice commands
 
