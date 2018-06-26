@@ -184,13 +184,13 @@ var playerSide=0;
 function rotateBoard() {
     angle+=180;
     playerSide+=1;
-    document.getElementById('mainChessBoard').style['-webkit-transition']= '-webkit-transform 2.5s ease-in';
+    document.getElementById('mainChessBoard').style['-webkit-transition']= '-webkit-transform 2s ease-in';
     document.getElementById('mainChessBoard').style['-webkit-transform']= 'rotateZ('+angle+'deg)';
     document.getElementById('mainChessBoard').style['-moz-transform']= 'rotateZ('+angle+'deg)';
     document.getElementById('mainChessBoard').style['transform']= 'rotateZ('+angle+'deg)';
 
     if (playerSide%2===0){
-        document.getElementById('chess-board').style['-webkit-transition']= '-webkit-transform 2.5s ease-in';
+        document.getElementById('chess-board').style['-webkit-transition']= '-webkit-transform 2s ease-in';
         document.getElementById('chess-board').style['-webkit-transform']= 'rotateX(50deg)';
         document.getElementById('chess-board').style['-moz-transform']= 'rotateX(50deg)';
         document.getElementById('chess-board').style['transform']= 'rotateX(50deg)';
@@ -201,14 +201,14 @@ function rotateBoard() {
         for (var i=0;i<pieceNo.length;i++){
             var pid="#"+pieceNo[i];
             $(pid).css({
-                "-webkit-transition":"-webkit-transform 2.5s ease-in",
+                "-webkit-transition":"-webkit-transform 2s ease-in",
                 "-webkit-transform":"rotateZ(0deg)",
                 "-moz-transform":"rotateZ(0deg)",
                 "transform":"rotateZ(0deg)"
             });
         }
     }else {
-        document.getElementById('chess-board').style['-webkit-transition']= '-webkit-transform 2.5s ease-in';
+        document.getElementById('chess-board').style['-webkit-transition']= '-webkit-transform 2s ease-in';
         document.getElementById('chess-board').style['-webkit-transform']= 'rotateX(-50deg)';
         document.getElementById('chess-board').style['-moz-transform']= 'rotateX(-50deg)';
         document.getElementById('chess-board').style['transform']= 'rotateX(-50deg)';
@@ -219,7 +219,7 @@ function rotateBoard() {
         for (var i=0;i<pieceNo.length;i++){
             var pid="#"+pieceNo[i];
             $(pid).css({
-                "-webkit-transition":"-webkit-transform 2.5s ease-in",
+                "-webkit-transition":"-webkit-transform 2s ease-in",
                 "-webkit-transform":"rotateZ(180deg)",
                 "-moz-transform":"rotateZ(180deg)",
                 "transform":"rotateZ(180deg)"
@@ -961,11 +961,7 @@ function isOpponent(piece,squareId) {
         // checkKing();
     }
 
-    if (pieceType!==targetPieceType && targetPieceTitle !==KING && targetPiece !==""+undefined){
-        return true;
-    }else {
-        return false;
-    }
+    return pieceType !== targetPieceType && targetPieceTitle !== KING && targetPiece !== "" + undefined;
 }
 
 function selectKnight() {
