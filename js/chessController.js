@@ -955,8 +955,6 @@ function isOpponent(piece,squareId) {
     var targetPieceType=targetPiece.substring(0,1);
     var targetPieceTitle=targetPiece.substring(1,2);//If king check available
 
-    // console.log(targetPiece+" "+targetPieceType+" "+targetPieceTitle);
-    // console.log(pieceType+" "+targetPieceType+" "+pieceType===targetPieceType);
     if (targetPieceTitle===KING){
         // checkKing();
     }
