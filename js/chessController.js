@@ -975,7 +975,7 @@ function selectKnight() {
     }
 }
 
-function movetoAthree() {
+function moveToAthree() {
     var nId="#wnl";
     var nTemp=$(nId).clone();
     $(nId).remove();
