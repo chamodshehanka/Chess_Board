@@ -5,15 +5,15 @@ function login() {
 }
 
 //menu links
-function homepage() {
+function homePage() {
     location.href = "index.html";
 }
 
-function playpage() {
+function playPage() {
     location.href = "play.html";
 }
 
-function blogpage() {
+function blogPage() {
     // location.href = "play.html";
     Materialize.toast('Blog is coming soon!', 2000,'rounded');
 }
