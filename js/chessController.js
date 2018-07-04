@@ -418,14 +418,14 @@ function chessPiece(piece,piecePosition) {
         if (piece===pieceNo[i]){
             var pieceType=piece.substring(0,1);
             if (pieceType==="w"){
-                genarateMoveSuggestions(WHITE,piece);
+                generateMoveSuggestions(WHITE,piece);
             }else {
-                genarateMoveSuggestions(BLACK,piece);
+                generateMoveSuggestions(BLACK,piece);
             }
         }
     }
 
-    function genarateMoveSuggestions(pieceType,piece) {
+    function generateMoveSuggestions(pieceType,piece) {
         var positionX=piecePosition.substring(0,1);
         var positionY;
         var pieceTitle=piece.substring(1,2);
