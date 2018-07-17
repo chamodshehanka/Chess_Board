@@ -118,7 +118,6 @@ var SQUARE_ID={
 
 var KING_POSSIBLE_MOVES=[8,7,9,-1,1,-9,-8,-7];
 var KNIGHT_POSSIBLE_MOVES=[15,6,-10,-17,-15,-6,10,17];
-var PAWN_POSSIBLE_MOVES=[8];
 
 var PAWN_DEFAULT_POSITION = {
     wp1 : "a2",
@@ -182,6 +181,8 @@ function resetChessBoard() {
 var angle=($('#mainChessBoard').data('angle')) || 0;
 var playerSide=0;
 function rotateBoard() {
+    var i;
+    var pid;
     angle+=180;
     playerSide+=1;
     document.getElementById('mainChessBoard').style['-webkit-transition']= '-webkit-transform 2s ease-in';
@@ -198,8 +199,8 @@ function rotateBoard() {
         turn=WHITE;
 
         //For Squares
-        for (var i=0;i<pieceNo.length;i++){
-            var pid="#"+pieceNo[i];
+        for (i=0;i<pieceNo.length;i++){
+            pid="#"+pieceNo[i];
             $(pid).css({
                 "-webkit-transition":"-webkit-transform 2s ease-in",
                 "-webkit-transform":"rotateZ(0deg)",
@@ -216,8 +217,8 @@ function rotateBoard() {
         turn=BLACK;
 
         //For Squares
-        for (var i=0;i<pieceNo.length;i++){
-            var pid="#"+pieceNo[i];
+        for (i=0;i<pieceNo.length;i++){
+            pid="#"+pieceNo[i];
             $(pid).css({
                 "-webkit-transition":"-webkit-transform 2s ease-in",
                 "-webkit-transform":"rotateZ(180deg)",
