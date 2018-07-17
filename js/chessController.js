@@ -428,17 +428,16 @@ function chessPiece(piece,piecePosition) {
     }
 
     function generateMoveSuggestions(pieceType,piece) {
-        var positionX=piecePosition.substring(0,1);
-        var positionY;
         var pieceTitle=piece.substring(1,2);
         var squareId;
+        var i, j, id;
 
         attack(pieceTitle,piecePosition,pieceType);
 
         if (pieceTitle===PAWN){
             squareSuggestions.length=0;
 
-            for (var i=0;i<16;i++){
+            for (i=0;i<16;i++){
                 if (PAWN_DEFAULT_POSITION[piece]===piecePosition){
                     pawnMoves=0;
                 }else {
@@ -489,7 +488,7 @@ function chessPiece(piece,piecePosition) {
                 }
             }
 
-            for (var i=0;i<squareSuggestions.length;i++){
+            for (i=0;i<squareSuggestions.length;i++){
                 setSquareColor(squareSuggestions[i],GREEN);
             }
         }
@@ -500,7 +499,7 @@ function chessPiece(piece,piecePosition) {
             row=parseInt(piecePosition.substring(1,2));
 
             //Rook up moves
-            for (var i = ROW[row]+1; i < 9; i++){
+            for (i = ROW[row]+1; i < 9; i++){
                 squareId=column+i;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(column+(row+1))===true){
                     setSquareColor(squareId,GREEN);
@@ -515,7 +514,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //Rook down moves
-            for (var i=ROW[row]-1;i>0;i--){
+            for (i=ROW[row]-1;i>0;i--){
                 squareId=column+i;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(column+(row-1))===true){
                     setSquareColor(squareId,GREEN);
@@ -530,7 +529,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //Rook right moves
-            for (var i=COLUMN[column]+1;i<9;i++){
+            for (i=COLUMN[column]+1;i<9;i++){
                 squareId=chessChars[i-1]+row;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[(COLUMN[column])]+row)===true){
                     setSquareColor(squareId,GREEN);
@@ -545,7 +544,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //Rook left movement
-            for (var i=COLUMN[column]-1;i>0;i--){
+            for (i=COLUMN[column]-1;i>0;i--){
                 squareId=chessChars[i-1]+row;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[i-1]+row)===true){
                     setSquareColor(squareId,GREEN);
@@ -564,13 +563,13 @@ function chessPiece(piece,piecePosition) {
             squareSuggestions.length=0;
 
             if (isKingSafe()===true){
-                var id=SQUARES[piecePosition];
+                id=SQUARES[piecePosition];
 
-                for (var i=0;i<KNIGHT_POSSIBLE_MOVES.length;i++){
+                for (i=0;i<KNIGHT_POSSIBLE_MOVES.length;i++){
                     squareSuggestions[i]=SQUARE_ID[id+KNIGHT_POSSIBLE_MOVES[i]];
                 }
 
-                for (var i=0;i<squareSuggestions.length;i++){
+                for (i=0;i<squareSuggestions.length;i++){
 
                     if (isSquareAvailable(squareSuggestions[i])===true){
                         setSquareColor(squareSuggestions[i],GREEN);
@@ -592,7 +591,7 @@ function chessPiece(piece,piecePosition) {
             row=parseInt(piecePosition.substring(1,2));
 
             //all possible moves in the down positive diagonal
-            for (var j=COLUMN[column],i=row+1;j<9 && i<9;j++,i++){
+            for (j=COLUMN[column],i=row+1;j<9 && i<9;j++,i++){
                 squareId=chessChars[j]+""+i;
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -608,7 +607,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //all possible moves in the up positive diagonal
-            for (var j=COLUMN[column]-2,i=row+1;j>-1 && i<9;j--,i++){
+            for (j=COLUMN[column]-2,i=row+1;j>-1 && i<9;j--,i++){
                 squareId=chessChars[j]+""+(i);
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -624,7 +623,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //all possible moves in the up negative diagonal
-            for (var j=COLUMN[column]-2,i=row-1;j>-1 && i>-1;j--,i--){
+            for (j=COLUMN[column]-2,i=row-1;j>-1 && i>-1;j--,i--){
                 squareId=chessChars[j]+""+(i);
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -640,7 +639,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //all possible moves in the down negative diagonal
-            for (var j=COLUMN[column],i=row-1;j<9 && i>0;j++,i--){
+            for (j=COLUMN[column],i=row-1;j<9 && i>0;j++,i--){
                 squareId=chessChars[j]+""+(i);
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -663,7 +662,7 @@ function chessPiece(piece,piecePosition) {
             column=piecePosition.substring(0,1);
             row=parseInt(piecePosition.substring(1,2));
 
-            for (var i = ROW[row]+1; i < 9; i++){
+            for (i = ROW[row]+1; i < 9; i++){
                 squareId=column+i;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(column+(row+1))===true){
                     setSquareColor(squareId,GREEN);
@@ -678,7 +677,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //Rook down moves
-            for (var i=ROW[row]-1;i>0;i--){
+            for (i=ROW[row]-1;i>0;i--){
                 squareId=column+i;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(column+(row-1))===true){
                     setSquareColor(squareId,GREEN);
@@ -693,7 +692,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //Rook right moves
-            for (var i=COLUMN[column]+1;i<9;i++){
+            for (i=COLUMN[column]+1;i<9;i++){
                 squareId=chessChars[i-1]+row;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[(COLUMN[column])]+row)===true){
                     setSquareColor(squareId,GREEN);
@@ -708,7 +707,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //Rook left movement
-            for (var i=COLUMN[column]-1;i>0;i--){
+            for (i=COLUMN[column]-1;i>0;i--){
                 squareId=chessChars[i-1]+row;
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[i-1]+row)===true){
                     setSquareColor(squareId,GREEN);
@@ -724,7 +723,7 @@ function chessPiece(piece,piecePosition) {
 
 
             //all possible moves in the down positive diagonal
-            for (var j=COLUMN[column],i=row+1;j<9 && i<9;j++,i++){
+            for (j=COLUMN[column],i=row+1;j<9 && i<9;j++,i++){
                 squareId=chessChars[j]+""+i;
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -740,7 +739,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //all possible moves in the up positive diagonal
-            for (var j=COLUMN[column]-2,i=row+1;j>-1 && i<9;j--,i++){
+            for (j=COLUMN[column]-2,i=row+1;j>-1 && i<9;j--,i++){
                 squareId=chessChars[j]+""+(i);
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -756,7 +755,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //all possible moves in the up negative diagonal
-            for (var j=COLUMN[column]-2,i=row-1;j>-1 && i>-1;j--,i--){
+            for (j=COLUMN[column]-2,i=row-1;j>-1 && i>-1;j--,i--){
                 squareId=chessChars[j]+""+(i);
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -772,7 +771,7 @@ function chessPiece(piece,piecePosition) {
             }
 
             //all possible moves in the down negative diagonal
-            for (var j=COLUMN[column],i=row-1;j<9 && i>0;j++,i--){
+            for (j=COLUMN[column],i=row-1;j<9 && i>0;j++,i--){
                 squareId=chessChars[j]+""+(i);
 
                 if (isSquareAvailable(squareId)===true && isSquareAvailable(chessChars[j]+i)===true){
@@ -792,7 +791,7 @@ function chessPiece(piece,piecePosition) {
             squareSuggestions.length=0;
 
             if ((isKingSafe() && canKingMove(pieceType,piecePosition))===true){
-                var id=SQUARES[piecePosition];
+                id=SQUARES[piecePosition];
 
                 for (var ii=0;ii<KING_POSSIBLE_MOVES.length;ii++){
                     squareSuggestions[ii]=SQUARE_ID[id+KING_POSSIBLE_MOVES[ii]];
@@ -860,8 +859,7 @@ function isKingSafe() {
 }
 
 function canKingMove(pieceType,piecePosition) {
-
-    return true;
+    return !(pieceType === null && piecePosition === null);
 }
 
 function checkMate() {
