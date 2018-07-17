@@ -254,19 +254,20 @@ function drag(ev) {
 
 function drop(ev) {
     ev.preventDefault();
+    var i;
     var data = ev.dataTransfer.getData("text");
     var droppingId=ev.target.id;
     var legalMove=false;
     var id="#"+droppingId;
     var droppingSquareId=$(id).parent().attr("id");
 
-    for (var i=0;i<squareSuggestions.length;i++){
+    for (i=0;i<squareSuggestions.length;i++){
         if (droppingId===squareSuggestions[i] || droppingSquareId===squareSuggestions[i]){
             legalMove=true;
         }
     }
 
-    for (var i=0;i<attackSuggestions.length;i++){
+    for (i=0;i<attackSuggestions.length;i++){
         if (droppingId===attackSuggestions[i] || droppingSquareId===attackSuggestions[i]){
             legalMove=true;
         }
