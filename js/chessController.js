@@ -581,7 +581,6 @@ function chessPiece(piece,piecePosition) {
 
             KNIGHT_OFFSETS.forEach(function(array2) {
                 array2.forEach(function (i) {
-                    // console.log();
                 });
             });
         }
@@ -813,13 +812,14 @@ function chessPiece(piece,piecePosition) {
 
 }
 function resetMoveSuggestions() {
+    var i;
 
-    for (var i=0;i<squareSuggestions.length;i++){
+    for (i=0;i<squareSuggestions.length;i++){
         setSquareColor(squareSuggestions[i],null);
     }
 
     if (attackSuggestions.length !==0){
-        for (var i=0;i<attackSuggestions.length;i++){
+        for (i=0;i<attackSuggestions.length;i++){
             setSquareColor(attackSuggestions[i],null);
         }
     }
@@ -977,7 +977,7 @@ function selectKnight() {
     }
 }
 
-function moveToAthree() {
+function moveToAThree() {
     var nId="#wnl";
     var nTemp=$(nId).clone();
     $(nId).remove();
