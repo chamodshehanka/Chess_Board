@@ -1183,4 +1183,5 @@ function(exports, module, define) {
 }).call(this,
         typeof exports !== 'undefined' ? /* istanbul ignore next */ exports : null,
         typeof module !== 'undefined' ? /* istanbul ignore next */ module : null,
-        typeof define !== 'undefined' ? /* istanbul ignore next */ define : null);
+        typeof define !== 'undefined' ? /* istanbul ignore next */ define : null
+);
